@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#__next {
+  min-height: 100%;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Klarheit';
+    src: url(/fonts/Klarheit/KlarheitKurrent-Bold.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: 'Apercu';
+    src: url(/fonts/Apercu/apercu-light.woff2) format("woff2");
+  }
+
+}
+
+
+
+.spin {
+  animation: customRotate 3s linear infinite;
+}
+
+
+@keyframes customRotate {
+  0% {
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+
+.spin-reverse {
+  animation: reverseRotate 2s linear infinite;
+}
+
+
+@keyframes reverseRotate {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+
+
+.svg-strock:hover > div  > svg {
+  stroke: #38bdf8;
+}
